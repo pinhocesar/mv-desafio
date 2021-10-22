@@ -22,12 +22,14 @@ function validarItem(nomeCol, cpfCol, itemCes){
     let item = document.getElementById(itemCes).value;
 
     if (nome == "")
-        alert("Favor adicionar seu nome.");
+        alert("Favor inserir seu nome.");
     else if (cpf == "")
-        alert("Favor adicionar número do CPF.");
+        alert("Favor inserir seu número de CPF.");
+    else if (cpf.length != 11)
+        alert("Favor inserir um número de CPF válido.");
     else if (item == "0")
         alert("Favor selecionar um dos itens da lista.");
-    else adicionarItem(nome, parseInt(cpf), item);
+    else adicionarItem(nome, cpf, item);
 }
 
 //Adiciona dados em um item da cesta
