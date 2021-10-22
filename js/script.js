@@ -15,7 +15,7 @@ $(document).ready(function(){
     }); 
   });
 
-//Valida preenchimento e chama função de adicionar item (falta colocar validação de itens repetidos)
+//Valida preenchimento e chama função de adicionar item
 function validarItem(nomeCol, cpfCol, itemCes){
     let nome = document.getElementById(nomeCol).value;
     let cpf = document.getElementById(cpfCol).value;
@@ -25,14 +25,14 @@ function validarItem(nomeCol, cpfCol, itemCes){
         alert("Favor inserir seu nome.");
     else if (cpf == "")
         alert("Favor inserir seu número de CPF.");
-    else if (cpf.length != 11)
+    else if (cpf.length < 11)
         alert("Favor inserir um número de CPF válido.");
     else if (item == "0")
         alert("Favor selecionar um dos itens da lista.");
     else adicionarItem(nome, cpf, item);
 }
 
-//Adiciona dados em um item da cesta
+//Adiciona dados em um item da cesta e chama função de remover opção do seletor
 function adicionarItem(nomeItm, cpfItm, itemItm){
     let novoItem = {nome:nomeItm, cpf:cpfItm, item:itemItm};
 
@@ -45,6 +45,13 @@ function adicionarItem(nomeItm, cpfItm, itemItm){
         alert("Item adicionado na cestinha :)");
         location.reload();
     } 
+    
+    removerOpcao();
+}
+
+//Remove opção do seletor (falta implementar)
+function removerOpcao(){
+
 }
 
 //Lista itens na cesta

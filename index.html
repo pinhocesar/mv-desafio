@@ -36,7 +36,9 @@
                     <label for="nomeCol">Nome do colaborador:</label>
                     <input type="text" id="nomeCol" placeholder="ex. João Silva">
                     <label for="cpfCol">CPF do colaborador:</label>
-                    <input type="text" id="cpfCol" placeholder="Digite apenas os números">
+                    <input type="text" id="cpfCol"
+                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                    maxlength="11" placeholder="Digite apenas os números">
                     <label for="itemCes">Selecione um dos itens da lista:</label>
                     <select name="lista" id="itemCes">
                         <option value="0">-----</option>
