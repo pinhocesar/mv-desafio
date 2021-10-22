@@ -19,7 +19,7 @@
             </div><!--logo-->
             <nav>
                 <a href="#" id="linkMain">Adicionar item</a>
-                <a href="#" id="linkList">Cesta</a>
+                <a href="#" id="linkList" onclick="listarCesta(this);">Cesta</a>
 
             </nav>
 
@@ -40,21 +40,21 @@
                     <label for="itemCes">Selecione um dos itens da lista:</label>
                     <select name="lista" id="itemCes">
                         <option value="0">-----</option>
-                        <option value="1">Pão</option>
-                        <option value="2">Queijo</option>
-                        <option value="3">Presunto</option>
-                        <option value="4">Bolo</option>
-                        <option value="5">Biscoito/Bolacha</option>
-                        <option value="6">Suco</option>
-                        <option value="7">Café</option>
-                        <option value="8">Leite</option>
-                        <option value="9">Iogurte</option>
-                        <option value="10">Manteiga/Requeijão</option>
-                        <option value="11">Cereal</option>
-                        <option value="12">Frutas</option>
+                        <option value="Pão">Pão</option>
+                        <option value="Queijo">Queijo</option>
+                        <option value="Presunto">Presunto</option>
+                        <option value="Bolo">Bolo</option>
+                        <option value="Biscoito/Bolacha">Biscoito/Bolacha</option>
+                        <option value="Suco">Suco</option>
+                        <option value="Café">Café</option>
+                        <option value="Leite">Leite</option>
+                        <option value="Iogurte">Iogurte</option>
+                        <option value="Manteiga">Manteiga/Requeijão</option>
+                        <option value="Cereal">Cereal</option>
+                        <option value="Frutas">Frutas</option>
 
                     </select>
-                    <input type="submit" value="Adicionar">
+                    <input type="button" value="Adicionar" onclick="validarItem('nomeCol', 'cpfCol', 'itemCes')">
 
                 </form>
 
@@ -63,7 +63,9 @@
         </div><!--main-wrapper-->
 
         <div class="list-wrapper" id="divList">
-            <p>Teste de troca de div :)</p>
+            <div class="item-list" id="itemList">
+
+            </div><!--item-list-->
 
         </div><!--list-wrapper-->
 

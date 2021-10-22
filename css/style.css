@@ -1,5 +1,4 @@
 /*Reseta página*/
-
 *{
     margin: 0;
     padding: 0;
@@ -11,16 +10,16 @@ body{
     background-color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: space-between;
-    height: auto;
 
 }
 
 /*Seta cabeçalho*/
-
 header .header-wrapper{
     width: 100%;
     height: 60px;
     padding: 10px 10px 10px 20px;
+    top: 0;
+    position: sticky;
     background-color: #71c5c8;
     color: #4e4e4e;
     display: flex;
@@ -54,7 +53,6 @@ header nav a:hover{
 }
 
 /*Seta div principal*/
-
 main .main-wrapper{
     color: #4e4e4e;
     display: flex;
@@ -104,7 +102,7 @@ main form select{
 
 }
 
-main form input[type=submit]{
+main form input[type=button]{
     margin-top: 30px;
     font-size: 15px;
     padding: 5px;
@@ -119,14 +117,13 @@ main form input[type=submit]{
 
 }
 
-main form input[type=submit]:hover{
+main form input[type=button]:hover{
     background-color: #56a4a7;
     color: #ffffff;
 
 }
 
 /*Seta div secundária*/
-
 main .list-wrapper{
     color: #4e4e4e;
     display: flex;
@@ -136,19 +133,34 @@ main .list-wrapper{
 
 }
 
-main .list-wrapper p{
+main .item-list h3{
     margin-top: 40px;
-    
+
+}
+
+main .item-list p{
+    margin-top: 20px;
+
+}
+
+main .item-list ul{
+    margin-top: 30px;
+
+}
+
+main .item-list li{
+    list-style-type: none;
+    margin-top: 5px;
+
 }
 
 /*Seta rodapé*/
-
 footer .footer-wrapper{
     width: 100%;
     height: 30px;
     padding: 5px 20px 5px 5px;
     bottom: 0;
-    position: absolute;
+    position:fixed;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -170,7 +182,6 @@ footer .footer-wrapper p a{
 }
 
 /*Seta responsividade mobile*/
-
 @media screen and (max-width:640px){
     header .header-wrapper{
         height: 80px;
@@ -180,7 +191,7 @@ footer .footer-wrapper p a{
 
     }
 
-    main form input[type=submit]{
+    main form input[type=button]{
         width: 100%;
         align-self: center;
 
