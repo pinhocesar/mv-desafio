@@ -1,9 +1,7 @@
 //Configura troca de divs por jquery
 $(document).ready(function(){
-    //Esconde div secundária
     $('#divList').hide();
     
-    //Efetua trocas com links
     $('#linkList').click(function(){ 
         $('#divMain').hide();
         $('#divList').show();
@@ -13,9 +11,9 @@ $(document).ready(function(){
         $('#divList').hide();
         $('#divMain').show();
     }); 
-  });
+});
 
-//Valida preenchimento e chama função de adicionar item
+//Valida preenchimento, chama função de adicionar item e de desabilitar opção do seletor
 function validarItem(nomeCol, cpfCol, itemCes){
     let nome = document.getElementById(nomeCol).value;
     let cpf = document.getElementById(cpfCol).value;
@@ -29,7 +27,9 @@ function validarItem(nomeCol, cpfCol, itemCes){
         alert("Favor inserir um número de CPF válido.");
     else if (item == "0")
         alert("Favor selecionar um dos itens da lista.");
-    else adicionarItem(nome, cpf, item); desabilitarOpcao(item); 
+    else
+        adicionarItem(nome, cpf, item); 
+        desabilitarOpcao(item); 
 }
 
 //Adiciona dados em um item da cesta
@@ -47,13 +47,13 @@ function adicionarItem(nomeItm, cpfItm, itemItm){
     }
 }
 
-//Desabilita opção do seletor (sob desenvolvimento)
+//Desabilita opção do seletor (em desenvolvimento)
 function desabilitarOpcao(){
     let valor = document.querySelector('#itemCes').value;
     console.log(valor);
 }
 
-//Lista itens na cesta
+//Lista itens adicionados na cesta
 function listarCesta(){
     document.getElementById('itemList').innerHTML = "";
     

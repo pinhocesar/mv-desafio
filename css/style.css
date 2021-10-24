@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body{
@@ -12,7 +11,6 @@ body{
     background-color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: space-between;
-
 }
 
 /*Seta cabeçalho*/
@@ -25,31 +23,27 @@ header .header-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 header .logo{
+    margin-right: 10px;
     display: flex;
     align-items: center;
-
 }
 
 header .logo i{
     margin-right: 10px;
     zoom: 1.5;
-
 }
 
 header nav a{
     color: #4e4e4e;
     text-decoration: none;
     margin-right: 10px;
-
 }
 
 header nav a:hover{
     font-weight: bold;
-
 }
 
 /*Seta div principal*/
@@ -59,17 +53,14 @@ main .main-wrapper{
     align-items: center;
     justify-content: center;
     margin: 0 30px 0 30px;
-
 }
 
 main h3{
     margin-top: 40px;
-
 }
 
 main p{
     margin-top: 10px;
-
 }
 
 main form{
@@ -77,13 +68,11 @@ main form{
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
-
 }
 
 main form label{
     margin-top: 20px;
     margin-bottom: 10px;
-
 }
 
 main form input[type=text]{
@@ -92,7 +81,6 @@ main form input[type=text]{
     color: #4e4e4e;
     border-radius: 5px;
     border: 0.25px solid #4e4e4e;
-
 }
 
 main form select{
@@ -100,7 +88,6 @@ main form select{
     font-size: 15px;
     color: #4e4e4e;
     border: 0.25px solid #4e4e4e;
-
 }
 
 main form input[type=button]{
@@ -115,13 +102,11 @@ main form input[type=button]{
     cursor: pointer;
     align-self: flex-end;
     transition: .3s ease all;
-
 }
 
 main form input[type=button]:hover{
     background-color: #56a4a7;
     color: #ffffff;
-
 }
 
 /*Seta div secundária*/
@@ -131,17 +116,14 @@ main .list-wrapper{
     align-items: center;
     justify-content: center;
     margin: 0 30px 0px 30px;
-
 }
 
 main .item-list h3{
     margin-top: 40px;
-
 }
 
 main .item-list p{
     margin-top: 20px;
-
 }
 
 main .item-list{
@@ -150,13 +132,11 @@ main .item-list{
 
 main .item-list ul{
     margin-top: 30px;
-
 }
 
 main .item-list li{
     list-style-type: none;
     margin-top: 5px;
-
 }
 
 /*Seta rodapé*/
@@ -170,20 +150,17 @@ footer .footer-wrapper{
     align-items: center;
     justify-content: flex-end;
     background-color: #71c5c8;
-
 }
 
 footer .footer-wrapper p{
     font-size: 10px;
     color: #4e4e4e;
-
 }
 
 footer .footer-wrapper p a{
     text-decoration: none;
     color: #4e4e4e;
     font-weight: bold;
-
 }
 
 /*Seta responsividade mobile*/
@@ -193,19 +170,21 @@ footer .footer-wrapper p a{
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     main form input[type=button]{
         width: 100%;
         align-self: center;
-
     }
 
     footer .footer-wrapper{
         display: flex;
         justify-content: center;
-
     }
+ }
 
+ @media screen and (max-width:332px){
+    header .header-wrapper .logo h2{
+        font-size: 22px;
+    }
  }
