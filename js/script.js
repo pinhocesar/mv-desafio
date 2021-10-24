@@ -49,7 +49,7 @@ function adicionarItem(nomeItm, cpfItm, itemItm){
 
 //Desabilita opção do seletor (sob desenvolvimento)
 function desabilitarOpcao(){
-    let valor = document.getElementById('itemCes').value;
+    let valor = document.querySelector('#itemCes').value;
     console.log(valor);
 }
 

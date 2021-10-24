@@ -34,11 +34,15 @@
                 <p>Preencha os campos abaixo para adicionar um novo item na cestinha :)</p>
                 <form>
                     <label for="nomeCol">Nome do colaborador:</label>
-                    <input type="text" id="nomeCol" placeholder="ex. João Silva">
+                    <input type="text" id="nomeCol" 
+                    onkeypress="return /[a-z ]/i.test(event.key)"
+                    maxlength="40" placeholder="ex. João Silva">
+                    
                     <label for="cpfCol">CPF do colaborador:</label>
                     <input type="text" id="cpfCol"
-                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                    onkeypress="return /[0-9]/i.test(event.key)"
                     maxlength="11" placeholder="Digite apenas os números">
+                    
                     <label for="itemCes">Selecione um dos itens da lista:</label>
                     <select name="lista" id="itemCes">
                         <option value="0">-----</option>
@@ -56,6 +60,7 @@
                         <option value="Frutas">Frutas</option>
 
                     </select>
+                    
                     <input type="button" value="Adicionar" onclick="validarItem('nomeCol', 'cpfCol', 'itemCes')">
 
                 </form>
