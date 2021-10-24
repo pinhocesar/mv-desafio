@@ -29,10 +29,10 @@ function validarItem(nomeCol, cpfCol, itemCes){
         alert("Favor inserir um número de CPF válido.");
     else if (item == "0")
         alert("Favor selecionar um dos itens da lista.");
-    else adicionarItem(nome, cpf, item);
+    else adicionarItem(nome, cpf, item); desabilitarOpcao(item); 
 }
 
-//Adiciona dados em um item da cesta e chama função de remover opção do seletor
+//Adiciona dados em um item da cesta
 function adicionarItem(nomeItm, cpfItm, itemItm){
     let novoItem = {nome:nomeItm, cpf:cpfItm, item:itemItm};
 
@@ -43,20 +43,20 @@ function adicionarItem(nomeItm, cpfItm, itemItm){
         cesta.push(novoItem);
         localStorage.setItem("cesta",JSON.stringify(cesta))
         alert("Item adicionado na cestinha :)");
-        location.reload();
-    } 
-    
-    removerOpcao();
+        //location.reload();
+    }
 }
 
-//Remove opção do seletor (falta implementar)
-function removerOpcao(){
-
+//Desabilita opção do seletor (sob desenvolvimento)
+function desabilitarOpcao(){
+    let valor = document.getElementById('itemCes').value;
+    console.log(valor);
 }
 
 //Lista itens na cesta
 function listarCesta(){
     document.getElementById('itemList').innerHTML = "";
+    
     if (typeof(Storage) !== "undefined"){
         let cesta = localStorage.getItem("cesta");
         document.getElementById('itemList').innerHTML += "<h3>Conteúdo da cesta</h3>";

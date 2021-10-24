@@ -74,6 +74,7 @@ main p{
 
 main form{
     margin-top: 10px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
 
@@ -144,7 +145,7 @@ main .item-list p{
 }
 
 main .item-list{
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
 
 main .item-list ul{
