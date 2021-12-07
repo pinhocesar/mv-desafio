@@ -49,8 +49,9 @@ function adicionarItem(nomeItm, cpfItm, itemItm){
 
 //Desabilita opção do seletor (em desenvolvimento)
 function desabilitarOpcao(){
-    let valor = document.querySelector('#itemCes').value;
-    console.log(valor);
+    //let valor = document.querySelector('#itemCes').value;
+    //console.log(valor);
+    $("#itemCes option:selected").attr('disabled','disabled');
 }
 
 //Lista itens adicionados na cesta
