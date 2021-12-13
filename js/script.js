@@ -43,14 +43,11 @@ function adicionarItem(nomeItm, cpfItm, itemItm){
         cesta.push(novoItem);
         localStorage.setItem("cesta",JSON.stringify(cesta))
         alert("Item adicionado na cestinha :)");
-        //location.reload();
     }
 }
 
 //Desabilita opção do seletor (em desenvolvimento)
 function desabilitarOpcao(){
-    //let valor = document.querySelector('#itemCes').value;
-    //console.log(valor);
     $("#itemCes option:selected").attr('disabled','disabled');
 }
 
